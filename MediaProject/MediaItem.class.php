@@ -21,7 +21,6 @@ class MediaItem {
         $this->title = $data['title'];
         $this->description = $data['description'];
         $this->created_at = new \DateTime($data['created_at']);
-
     }
 
     public function getMediaItem(): array {

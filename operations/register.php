@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $STH->execute($data);
             header('Location: ../index.php?success=Registration successful');
         } catch (PDOException $e) {
-            echo "Could not insert data into the database.";
+            echo "Could not insert data into the database." . $e->getMessage();
             file_put_contents('PDOErrors.txt', 'register.php - ' . $e->getMessage(), FILE_APPEND);
         }
     }

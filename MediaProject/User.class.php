@@ -2,8 +2,7 @@
 
 namespace MediaProject;
 
-class User
-{
+class User {
     private int $user_id;
     private string $username;
     private string $password;
@@ -11,8 +10,7 @@ class User
     private int $user_level_id;
     private \DateTime $created_at;
 
-    public function __construct($data)
-    {
+    public function __construct($data) {
         $this->user_id = $data['user_id'];
         $this->username = $data['username'];
         $this->password = $data['password'];
@@ -21,8 +19,7 @@ class User
         $this->created_at = new \DateTime($data['created_at']);
     }
 
-    public function getUser(): array
-    {
+    public function getUser(): array {
         return [
             'user_id' => $this->user_id,
             'username' => $this->username,
